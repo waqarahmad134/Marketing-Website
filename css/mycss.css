@@ -28,7 +28,10 @@ html,body {
   .back-banner-2{
     max-width: 100%;
   }
-
+  .responsive{
+    margin-top: 200px;
+    width: 100%;
+  }
 }
 
 
@@ -320,13 +323,10 @@ header {
 @media (max-width: 770px) {
   .social-icon-banner {
     justify-content: center; /* Center horizontally */
-
   }
+
+
 }
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -346,6 +346,17 @@ header {
   .data-banner {
     margin: 20px;
   }
+  .back-banner-1{
+    height: auto;
+  }
+  .back-banner-2{
+    height: auto;
+
+  }
+  .back-banner-3{
+    height: auto;
+
+  }
 }
 
 
@@ -358,8 +369,12 @@ header {
     height: 100%; /* Set height to 100% of viewport height */
     z-index: 1000;
   }
+  .container{
+    margin-top: 20%;
 
+  }
 }
+
 /*under 992*/
 @media (max-width: 992px) { /*applies to under 992*/
   html{
@@ -603,7 +618,48 @@ nav.hide{
 
 }
 
+@media (max-width: 900px) {
+  .next-banner-1,
+  .next-banner-2,
+  .next-banner-3,
+  .left-banner,
+  .bg-solid-color,
+  .right-banner {
+    width: 100%;
+    justify-content: center;
+  }
 
+  .bg-solid-color {
+    height: 50vh;
+    width: 40vh;
+  }
+
+  .text-change-area {
+    height: 15vh;
+  }
+}
+
+/* Further responsive adjustments */
+@media (max-width: 750px) {
+  .bg-solid-color {
+    height: 30vh;
+    /*width: 40vh;*/
+  }
+  .right-banner{
+    width: 90%;
+  }
+
+}
+@media (max-width: 480px) {
+  .text-change-area-h3 {
+    font-size: 36px;
+  }
+
+  .description-who-we-are {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
 /*.middle-lower-1{*/
 /*  width: 100%;*/
 /*  background-color: aqua;*/
@@ -649,18 +705,19 @@ nav.hide{
 
 /*Slider Our Clients*/
 .container{
-  padding-top: 20vh;
+  padding-top: 15vh;
   padding-bottom: 20vh;
 }
 .text-center{
   text-align: center;
   padding: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 .slick-slide{
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .slick-slide img{
-  width: 100%;
+  width: 80%;
 }
 .slick-slider{
   position: relative;
@@ -711,10 +768,11 @@ body{
   position: sticky;
   top: 100%;
   bottom: 0;
-  background: linear-gradient(to right, #000000, #000000);
+  /*background: linear-gradient(to right, #000000, #000000);*/
+  background: #24252A;
   color: #fff;
   padding: 50px 0 30px;
-  border-top-left-radius: 125px;
+  /*border-top-left-radius: 125px;*/
   font-size: 13px;
   line-height: 20px;
 }
@@ -734,6 +792,10 @@ body{
 
 .colFooter:nth-child(2), .colFooter:nth-child(3){
   flex-basis: 15%;
+}
+.footer-paragraph{
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
 }
 
 

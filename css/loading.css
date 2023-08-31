@@ -15,7 +15,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: #ffffff;
 
   height: 100%;
   width: 100%;
@@ -24,13 +24,13 @@ body {
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  color: #191654;
+  /*color: #ff1717;*/
 }
 
 #svg {
   height: 150px;
   width: 150px;
-  stroke: white;
+  stroke: #000000;
   fill-opacity: 0;
   stroke-width: 3px;
   stroke-dasharray: 4500;
@@ -50,13 +50,13 @@ body {
 }
 
 .name-container-loading {
-  height: 30px;
+  height: 40px;
   overflow: hidden;
 }
 
 .logo-name-loading {
-  color: #fff;
-  font-size: 20px;
+  color: #000000;
+  font-size: 30px;
   letter-spacing: 12px;
   text-transform: uppercase;
   margin-left: 20px;

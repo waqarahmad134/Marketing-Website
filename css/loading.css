@@ -5,12 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Michroma", sans-serif;
-  height: 100vh;
-}
-
-
 
 .loading-page {
   z-index: 2;

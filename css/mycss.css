@@ -367,11 +367,10 @@ header {
     width: 100%; /* Set width to 100% */
     transition: right 1s ease;
     height: 100%; /* Set height to 100% of viewport height */
-    z-index: 1000;
+    z-index: 1;
   }
   .container{
     margin-top: 20%;
-
   }
 }
 

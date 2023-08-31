@@ -26,22 +26,22 @@ function menuBar() {
 
 }
 
-window.onload = () =>{
-  var $textChangeAreas = $(".text-change-area-h3");
-  var t,
-    n = 0;
-
-    clearInterval(t);
-    t = setInterval(function () {
-      $textChangeAreas.addClass("DisplayNone"); // Hide all headings
-      $textChangeAreas.eq(n).removeClass("DisplayNone"); // Display the current heading
-      n++;
-      n === $textChangeAreas.length && (n = 0);
-    }, 220);
-
-}
-
-
+// window.onload = () =>{
+//   var $textChangeAreas = $(".text-change-area-h3");
+//   var t,
+//     n = 0;
+//
+//     clearInterval(t);
+//     t = setInterval(function () {
+//       $textChangeAreas.addClass("DisplayNone"); // Hide all headings
+//       $textChangeAreas.eq(n).removeClass("DisplayNone"); // Display the current heading
+//       n++;
+//       n === $textChangeAreas.length && (n = 0);
+//     }, 220);
+//
+// }
+//
+//
 
 
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');*/
 :root{
   --headerclr:#6156F9;
   --mainclr:#ed358d;
@@ -278,6 +278,7 @@ header {
 }
 .heading-banner{
   letter-spacing: .54em;
+  font-family: "Montserrat", sans-serif;
 
 }
 /*.heading-banner h3 {*/
@@ -285,9 +286,10 @@ header {
 /*  color: white;*/
 /*}*/
 
-.paragraph-banner h1 {
-  font-size: 1.5rem;
-  color: white;
+.paragraph-banner h4 {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+
 }
 .heading-banner  {
   margin: 10px;

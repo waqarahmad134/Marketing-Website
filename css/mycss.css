@@ -212,7 +212,6 @@ header {
 
 
 
-
 .front-h3{
   font-size: 25vw;
   /*background-image: url(../img/test-img.jpeg);*/
@@ -220,7 +219,8 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: imageTransition 5s infinite alternate; /* Adjust timing as needed */
+  font-family: "Montserrat", sans-serif;
+  animation: imageTransition 10s infinite alternate; /* Adjust timing as needed */
   margin: 0;
   padding: 0;
   pointer-events: none; /* Disable pointer interactions */
@@ -280,10 +280,10 @@ header {
   letter-spacing: .54em;
 
 }
-.heading-banner h3 {
-  font-size: 2rem;
-  color: white;
-}
+/*.heading-banner h3 {*/
+/*  font-size: 2rem;*/
+/*  color: white;*/
+/*}*/
 
 .paragraph-banner h1 {
   font-size: 1.5rem;
@@ -318,6 +318,37 @@ header {
   margin: 10px; /* Add margin for spacing */
   font-size: 20px;
 }
+@media (max-width: 550px){
+  .image-banner,.img-bg{
+    padding-top: 40px;
+    position: relative;
+  }
+  .front-h3{
+    font-size: 30vw;
+  }
+  .paragraph-banner{
+    margin: auto 10px;
+  }
+
+
+}
+@media (max-width: 420px){
+  .paragraph-banner{
+    margin: 0;
+  }
+  .heading-banner {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  .heading-banner h2{
+    font-size: 2em;
+    text-align: left;
+
+  }
+  .paragraph-banner {
+    text-align: left;
+  }
+}
 
 /* Center the icons with media under 740px */
 @media (max-width: 770px) {
@@ -330,9 +361,9 @@ header {
 
 
 @media (max-width: 768px) {
-  .paragraph-banner h1 {
-    font-size: 1rem;
-    padding: 5px;
+  .paragraph-banner h4 {
+    font-size: 1.5rem;
+    /*padding: 5px;*/
   }
 }
 

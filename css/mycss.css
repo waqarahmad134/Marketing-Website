@@ -730,9 +730,6 @@ nav.hide{
 
 
 
-
-
-
 /*Slider Our Clients*/
 .container{
   padding-top: 15vh;
@@ -746,8 +743,19 @@ nav.hide{
 .slick-slide{
   margin: 0 10px;
 }
+
 .slick-slide img{
-  width: 80%;
+  width: 60%;
+}
+.ih1{
+  padding-top: 15%;
+}
+.ih2,.ih3{
+  padding-top: 13%;
+}
+
+img{
+  /*filter: grayscale(100);*/
 }
 .slick-slider{
   position: relative;
@@ -761,6 +769,7 @@ nav.hide{
   margin: 0;
   padding: 0;
 }
+
 .slick-track{
   position: relative;
   top: 0;

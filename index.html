@@ -143,6 +143,13 @@
               </div>
             </div>
 
+            <svg class="svg-blob" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="20%" id="blobSvg" style="opacity: 1;" transform="rotate(170)" filter="blur(0px)">
+              <defs>                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: rgb(0, 76, 255);"></stop>
+                <stop offset="100%" style="stop-color: rgb(0, 98, 255);"></stop>
+              </linearGradient>                        </defs>
+              <path id="blob" fill="url(#gradient)" style="opacity: 1;"><animate attributeName="d" dur="9000ms" repeatCount="indefinite"
+                                                                                 values="M420.7122,331.4339Q380.09423,412.86779,301.16508,392.29219Q222.23594,371.7166,157.11322,349.24982Q91.99051,326.78305,53.64135,232.38203Q15.29219,137.98101,118.09898,129.47187Q220.90577,120.96273,294.67458,111.25967Q368.44339,101.55661,414.88678,175.77831Q461.33017,250,420.7122,331.4339Z;M429.79847,339.54154Q392.67727,429.08308,294.97368,455.00137Q197.27008,480.91966,143.94598,403.56786Q90.62188,326.21607,83.52769,246.22992Q76.43351,166.24376,136.8518,92.77008Q197.27008,19.29641,287.1482,55Q377.02632,90.70359,421.97299,170.3518Q466.91966,250,429.79847,339.54154Z;M388.67097,319.27849Q360.55699,388.55699,291.23441,379.72688Q221.91183,370.89678,145.00645,354.28387Q68.10108,337.67097,71.32903,251.33548Q74.55699,165,142.39247,119.95591Q210.22796,74.91183,286.12043,91.61398Q362.0129,108.31613,389.39892,179.15806Q416.78495,250,388.67097,319.27849Z;M420.7122,331.4339Q380.09423,412.86779,301.16508,392.29219Q222.23594,371.7166,157.11322,349.24982Q91.99051,326.78305,53.64135,232.38203Q15.29219,137.98101,118.09898,129.47187Q220.90577,120.96273,294.67458,111.25967Q368.44339,101.55661,414.88678,175.77831Q461.33017,250,420.7122,331.4339Z"></animate></path></svg>
 
 
 
@@ -201,6 +208,61 @@
     </section>
   </div>
   </section>
+
+
+<section>
+  <div class="testimonial-banner">
+  <div class="testimonial-grey">
+    <div class="display-row floatL ">
+      <div class="display-cell floatL width100">
+
+        <div class="display-last floatL width100">
+
+        <div class="testimonials-written">
+
+          <div class="testimonial-heading">
+          <h2>Clients Across The Globe</h2>
+          </div>
+          <div class="testimonial-slider">
+            <div class="testimonial" >
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget orci eu quam placerat suscipit.</p>
+              <p class="author">John Doe</p>
+              <p class="designation">CEO at ClearTrim</p>
+
+            </div>
+            <div class="testimonial" >
+              <p>Nullam eleifend facilisis lectus, in fermentum nisi suscipit in. Proin efficitur mi nec justo luctus.</p>
+              <p class="author">Jane Smith</p>
+              <p class="designation">Managing Partner at OLabs</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonials-logos">
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +336,32 @@
 
 
 
+<script>
+  $(document).ready(function() {
+    // Initialize variables
+    var testimonials = $(".testimonial");
+    var currentIndex = 0;
 
+    // Hide all testimonials except the first one
+    testimonials.slice(1).hide();
+
+    // Function to show the next testimonial
+    function showNextTestimonial() {
+      testimonials.eq(currentIndex).fadeOut("fast",
+
+        function()
+        {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+
+        testimonials.eq(currentIndex).fadeIn("fast");
+
+      }
+      );
+    }
+
+    setInterval(showNextTestimonial, 3000);
+  });
+</script>
 
 
 

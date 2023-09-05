@@ -53,290 +53,7 @@
   user-select: none;
 }
 
-@media (min-width: 992px) {
-  li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-  }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    /*justify-content: flex-end; !*flex everything to right*!*/
-    align-items: center;
-    padding: 30px 10%;
-  }
-
-  .logo {
-    cursor: pointer;
-    width: 200px;
-    /*margin-right: auto;!*To put logo at left*!*/
-  }
-
-
-
-  .nav__links li {
-    transition: all 0.3s ease 0s;
-    display: inline-block;
-    padding: 0 10px;
-    cursor: pointer;
-  }
-
-  .nav__links li a {
-    transition: all 0.3s ease 0s;
-  }
-
-  .nav__links li:hover {
-    text-decoration-color: #0088a9;
-    color: #0088a9;
-  }
-
-  button, #button-a {
-    /*margin-left: 20px;*/
-    /*margin-left: 10px;*/
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-
-  }
-
-  button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
-
-  }
-
-  .menu-icon{
-    display: none;
-  }
-}
-@media (max-width: 340px) {
-  html,body {
-    overflow: auto; /* Change from "hidden" to "auto" */
-    max-height: 340px; /* Set the maximum height for scrolling */
-  }
-  .back-banner-2{
-    max-width: 100%;
-  }
-  .responsive{
-    margin-top: 30vh;
-    position: relative;
-  }
-
-}
-@media (max-width: 550px){
-  .image-banner,.img-bg{
-    padding-top: 40px;
-    position: relative;
-  }
-  .front-h3{
-    font-size: 30vw;
-  }
-  .paragraph-banner{
-    margin: auto 10px;
-  }
-
-
-}
-@media (max-width: 420px){
-  .paragraph-banner{
-    margin: 0;
-  }
-  .heading-banner {
-    margin: 0;
-    padding-bottom: 10px;
-  }
-  .heading-banner h2{
-    font-size: 2em;
-    text-align: left;
-
-  }
-  .paragraph-banner {
-    text-align: left;
-  }
-}
-@media (max-width: 770px) {
-  .social-icon-banner {
-    justify-content: center; /* Center horizontally */
-  }
-
-
-}
-@media (max-width: 768px) {
-  .paragraph-banner h4 {
-    font-size: 1.5rem;
-    /*padding: 5px;*/
-  }
-}
-@media (max-width: 768px) {
-  .back-banner-2 {
-    width: 100%;
-    min-width: auto;
-  }
-
-  .data-banner {
-    margin: 20px;
-  }
-  .back-banner-1{
-    height: auto;
-  }
-  .back-banner-2{
-    height: auto;
-
-  }
-  .back-banner-3{
-    height: auto;
-
-  }
-}
-@media (max-width: 740px) {
-
-  nav.active {
-    right: 0;
-    width: 100%; /* Set width to 100% */
-    transition: right 1s ease;
-    height: 100%; /* Set height to 100% of viewport height */
-    z-index: 1;
-  }
-  .container{
-    margin-top: 20%;
-  }
-}
-@media (max-width: 992px) { /*applies to under 992*/
-  html{
-    font-size: 55%;
-  }
-  li, ul,a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-  }
-  .logo {
-    cursor: pointer;
-    margin: auto;/*To put logo at left*/
-  }
-
-  header {
-    display: flex;
-    /*justify-content: space-between;*/
-    justify-content: flex-end; /*flex everything to right*/
-    align-items: center;
-    padding: 1px 5%;
-  }
-
-
-  nav {
-    position: fixed;
-    top: 3.9%;
-    right: -100%;
-    width: 60%;
-    height: 100vh;
-    background: #000000;
-    color: #0088a9;
-    transition: right 0.7s ease; /* Added transition property */
-
-  }
-
-
-  .nav__links a {
-    display: block;
-    margin: 1rem;
-    padding: 1rem;
-    color: white;
-    font-size: 1.5rem;
-
-  }
-
-  .nav__links  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center items vertically */
-    position: absolute; /* Position within the container */
-    transform: translate(-30%, -120%); /* Adjust for centering */
-    top: 50%; /* Center vertically */
-    left: 10%; /* Center horizontally */
-
-  }
-
-
-  button{
-    display: none;
-  }
-  .back-banner-1{
-    max-height: 60vh ;
-  }
-  .back-banner-1{
-    max-height: 60vh ;
-  }
-
-}
-@media (max-width: 900px) {
-  .next-banner-1,
-  .next-banner-2,
-  .next-banner-3,
-  .left-banner,
-  .bg-solid-color,
-  .right-banner {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .bg-solid-color {
-    height: 50vh;
-    width: 40vh;
-  }
-
-  .text-change-area {
-    height: 15vh;
-  }
-}
-@media (max-width: 750px) {
-  .bg-solid-color {
-    height: 30vh;
-    /*width: 40vh;*/
-  }
-  .right-banner{
-    width: 90%;
-  }
-}
-@media (max-width: 480px) {
-  .text-change-area-h3 {
-    font-size: 36px;
-  }
-
-  .description-who-we-are {
-    font-size: 14px;
-    padding: 20px;
-  }
-}
-@media (max-width: 900px) {
-  .next-banner-3, .next-banner-2, .next-banner-1 {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-}
-@media (max-width: 700px) {
-  footer{
-    bottom: unset;
-  }
-  .colFooter{
-    flex-basis: 100%;
-  }
-
-
-  .colFooter:nth-child(2), .colFooter:nth-child(3){
-    flex-basis: 100%;
-  }
-
-}
 
 @keyframes imageTransition {
   0% {
@@ -834,29 +551,314 @@ hr{
 
 
 
+@media (min-width: 992px) {
+  li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    /*justify-content: flex-end; !*flex everything to right*!*/
+    align-items: center;
+    padding: 30px 10%;
+  }
+
+  .logo {
+    cursor: pointer;
+    width: 200px;
+    /*margin-right: auto;!*To put logo at left*!*/
+  }
+
+
+
+  .nav__links li {
+    transition: all 0.3s ease 0s;
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav__links li:hover {
+    text-decoration-color: #0088a9;
+    color: #0088a9;
+  }
+
+  button, #button-a {
+    /*margin-left: 20px;*/
+    /*margin-left: 10px;*/
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+  }
+
+  button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+
+  }
+
+  .menu-icon{
+    display: none;
+  }
+}
+@media (max-width: 340px) {
+  html,body {
+    overflow: auto; /* Change from "hidden" to "auto" */
+    max-height: 340px; /* Set the maximum height for scrolling */
+  }
+  .back-banner-2{
+    max-width: 100%;
+  }
+  .responsive{
+    margin-top: 30vh;
+    position: relative;
+  }
+
+}
+@media (max-width: 550px){
+  .image-banner,.img-bg{
+    padding-top: 40px;
+    position: relative;
+  }
+  .front-h3{
+    font-size: 30vw;
+  }
+  .paragraph-banner{
+    margin: auto 10px;
+  }
+
+
+}
+@media (max-width: 420px){
+  .paragraph-banner{
+    margin: 0;
+  }
+  .heading-banner {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  .heading-banner h2{
+    font-size: 2em;
+    text-align: left;
+
+  }
+  .paragraph-banner {
+    text-align: left;
+  }
+}
+@media (max-width: 770px) {
+  .social-icon-banner {
+    justify-content: center; /* Center horizontally */
+  }
+
+
+}
+@media (max-width: 768px) {
+  .paragraph-banner h4 {
+    font-size: 1.5rem;
+    /*padding: 5px;*/
+  }
+}
+@media (max-width: 768px) {
+  .back-banner-2 {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .data-banner {
+    margin: 20px;
+  }
+  .back-banner-1{
+    height: auto;
+  }
+  .back-banner-2{
+    height: auto;
+
+  }
+  .back-banner-3{
+    height: auto;
+
+  }
+}
+@media (max-width: 740px) {
+
+  nav.active {
+    right: 0;
+    width: 100%; /* Set width to 100% */
+    transition: right 1s ease;
+    height: 100%; /* Set height to 100% of viewport height */
+    z-index: 1;
+  }
+  .container{
+    margin-top: 20%;
+  }
+}
+@media (max-width: 992px) { /*applies to under 992*/
+  html{
+    font-size: 55%;
+  }
+  li, ul,a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  .logo {
+    cursor: pointer;
+    margin: auto;/*To put logo at left*/
+  }
+
+  header {
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: flex-end; /*flex everything to right*/
+    align-items: center;
+    padding: 1px 5%;
+  }
+
+
+  nav {
+    position: fixed;
+    top: 3.9%;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: #000000;
+    color: #0088a9;
+    transition: right 0.7s ease; /* Added transition property */
+
+  }
+
+
+  .nav__links a {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+
+  }
+
+  .nav__links  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    position: absolute; /* Position within the container */
+    transform: translate(-30%, -120%); /* Adjust for centering */
+    top: 50%; /* Center vertically */
+    left: 10%; /* Center horizontally */
+
+  }
+
+
+  button{
+    display: none;
+  }
+  .back-banner-1{
+    max-height: 60vh ;
+  }
+  .back-banner-1{
+    max-height: 60vh ;
+  }
+
+}
+@media (max-width: 900px) {
+  .next-banner-1,
+  .next-banner-2,
+  .next-banner-3,
+  .left-banner,
+  .bg-solid-color,
+  .right-banner {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bg-solid-color {
+    height: 50vh;
+    width: 40vh;
+  }
+
+  .text-change-area {
+    height: 15vh;
+  }
+}
+@media (max-width: 750px) {
+  .bg-solid-color {
+    height: 30vh;
+    /*width: 40vh;*/
+  }
+  .right-banner{
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .text-change-area-h3 {
+    font-size: 36px;
+  }
+
+  .description-who-we-are {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .next-banner-3, .next-banner-2, .next-banner-1 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media (max-width: 700px) {
+  footer{
+    bottom: unset;
+  }
+  .colFooter{
+    flex-basis: 100%;
+  }
+
+
+  .colFooter:nth-child(2), .colFooter:nth-child(3){
+    flex-basis: 100%;
+  }
+
+}
 
 
 
 
 
 
+/*.quote{*/
+/*  background-image: url("img/comma.png");*/
+/*  position: absolute;*/
+/*  !*-webkit-text-fill-color: transparent;*!*/
+/*  width: 126px;*/
+/*  height: 126px;*/
+/*  top: 0;*/
+/*  left: 0;*/
 
-
-
-
-
-
-
-
-
-
-
-
+/*}*/
 
 .testimonial{
   margin: 40px;
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
+
+ transition:  all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
 
 }
 .author{

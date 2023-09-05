@@ -9,7 +9,8 @@
   width: 100%;
 }
  html,body {
-  /*overflow: auto; !* Change from "hidden" to "auto" *!*/
+  overflow: auto; /* Change from "hidden" to "auto" */
+   /*overflow: unset;*/
 }
  body{
   min-height: 100vh;

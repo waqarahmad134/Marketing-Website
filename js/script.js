@@ -1,5 +1,11 @@
 function menuBar() {
 
+  var unset_html = document.querySelector("html");
+  var unset_body = document.querySelector("body");
+
+  unset_html.style.overflow = "unset";
+  unset_body.style.overflow = "unset";
+
 
   var menubar = document.querySelector('#menu-bar')
   var mynav = document.querySelector('nav')
@@ -10,7 +16,7 @@ function menuBar() {
     mynav.classList.toggle('active')
   }
 
-  const navbar = document.querySelector('.header')
+  // const navbar = document.querySelector('.header')
 
   window.onscroll = () => {
 

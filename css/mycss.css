@@ -584,6 +584,13 @@ hr{
 }
 
 
+.testimonial-grey{ /*1389px*/
+  width: 70%;
+}
+
+/*.testimonial-grey{*/
+/*  height: 80vh;*/
+/*}*/
 
 
 
@@ -653,6 +660,20 @@ hr{
 
 
 }
+@media (min-width: 500px )and (max-width: 1200px){
+  .testimonial-grey{
+    width: 95%;
+    height: 70vh ;
+
+  }
+}
+@media (min-width: 1200px) and (max-width: 1389px){
+  .testimonial-grey{
+    width: 80%;
+    height: 75vh ;
+
+  }
+}
 @media (max-width: 340px) {
   html,body {
     overflow: auto; /* Change from "hidden" to "auto" */
@@ -679,7 +700,9 @@ hr{
     margin: auto 10px;
   }
 
-
+  .testimonial-grey{
+    width: 100%;
+  }
 }
 @media (max-width: 420px){
   .paragraph-banner{
@@ -702,8 +725,6 @@ hr{
   .social-icon-banner {
     justify-content: center; /* Center horizontally */
   }
-
-
 }
 @media (max-width: 768px) {
   .paragraph-banner h4 {
@@ -759,9 +780,6 @@ hr{
   .testimonials-logos{
     width: 100%;
   }
-  .testimonial-grey{
-    height: 85vh;
-  }
   li, ul,a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -772,6 +790,10 @@ hr{
   .logo {
     cursor: pointer;
     margin: auto;/*To put logo at left*/
+  }
+
+  .testimonial-grey{
+    height: auto;
   }
 
   header {

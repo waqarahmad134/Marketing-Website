@@ -185,7 +185,7 @@
 
 <!--Our Clients-->
   <br>
-  <section class="responsive">
+  <section class="logos-slider-section">
   <div class="container">
     <h2 class="text-center font-weight-bold">Our Partners</h2>
     <section class="customer-logos slider">
@@ -196,7 +196,6 @@
       <div class="slide"><img class= "ih2" src="img/images/tiktok.png" alt="tiktok"></div>
       <div class="slide"><img class= "ih3" src="img/images/snapchat.png" alt="snapchat"></div>
       <div class="slide"><img src="img/images/youtube.png" alt="youtube"></div>
-
     </section>
   </div>
   </section>
@@ -232,10 +231,42 @@
           </div>
 
         </div>
-
+<!--          <img  height="1200" width="1200"/>-->
         <div class="testimonials-logos">
-        </div>
+            <section class="customer-logos1 slider">
+              <div class="logo-row">
+                <div class="slide-test"><img src="img/images/google.png" alt="google"></div>
+                <div class="slide-test"><img src="img/images/facebook.png" alt="facebook"></div>
+                <div class="slide-test"><img src="img/images/instagram.png" alt="instagram"></div>
+              </div>
+              <div class="logo-row">
+                <div class="slide-test"><img src="img/images/google.png" alt="google"></div>
+                <div class="slide-test"><img src="img/images/facebook.png" alt="facebook"></div>
+                <div class="slide-test"><img src="img/images/instagram.png" alt="instagram"></div>
+              </div>
+              <div class="logo-row">
+                <div class="slide-test"><img src="img/images/google.png" alt="google"></div>
+                <div class="slide-test"><img src="img/images/facebook.png" alt="facebook"></div>
+                <div class="slide-test"><img src="img/images/instagram.png" alt="instagram"></div>
+              </div>
 
+              <div class="logo-row">
+                <div class="slide-test"><img src="img/images/google.png" alt="google"></div>
+                <div class="slide-test"><img src="img/images/facebook.png" alt="facebook"></div>
+                <div class="slide-test"><img src="img/images/instagram.png" alt="instagram"></div>
+              </div>
+              <div class="logo-row">
+                <div class="slide-test"><img src="img/images/google.png" alt="google"></div>
+                <div class="slide-test"><img src="img/images/facebook.png" alt="facebook"></div>
+                <div class="slide-test"><img src="img/images/instagram.png" alt="instagram"></div>
+              </div>
+              <div class="logo-row">
+                <div class="slide-test"><img src="img/images/google.png" alt="google"></div>
+                <div class="slide-test"><img src="img/images/facebook.png" alt="facebook"></div>
+                <div class="slide-test"><img src="img/images/instagram.png" alt="instagram"></div>
+              </div>
+            </section>
+          </div>
 
         </div>
       </div>
@@ -246,6 +277,32 @@
 
 
 
+  <script>
+    $(document).ready(function(){
+      $('.customer-logos1').slick({
+        slidesToShow: 3,      // Show 3 logos at a time
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 3500,
+        arrows: false,
+        dots: true,
+        pauseOnHover: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3
+            }
+          }, {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 3
+            }
+          }
+        ]
+      });
+    });
+  </script>
 
 
 

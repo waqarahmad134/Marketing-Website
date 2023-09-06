@@ -1,26 +1,30 @@
+document.addEventListener('DOMContentLoaded', menuBar);
+
 function menuBar() {
 
   var unset_html = document.querySelector("html");
   var unset_body = document.querySelector("body");
 
-  unset_html.style.overflow = "unset";
-  unset_body.style.overflow = "unset";
 
 
-  var menubar = document.querySelector('#menu-bar')
-  var mynav = document.querySelector('nav')
+  var menubar = document.querySelector('#menu-bar');
+  var mynav = document.querySelector('nav');
 
 
   menubar.onclick = () => {
-    menubar.classList.toggle('fa-times')
-    mynav.classList.toggle('active')
+
+    unset_html.style.overflow = "unset";
+    unset_body.style.overflow = "unset";
+
+    menubar.classList.toggle('fa-times');
+    mynav.classList.toggle('active');
   }
 
   // const navbar = document.querySelector('.header')
 
   window.onscroll = () => {
 
-    if (window.scrollY > 10) {
+    if (window.scrollY > 0) {
 
       menubar.classList.remove('fa-times');
       mynav.classList.remove('active');

@@ -53,12 +53,12 @@ function menuBar() {
 
 
 
-
-
-// for error > 400 e.g error 404 page not found
-if (iStatusCode >= 400)
-{
-  if (strErrorBody.Length < 512) strErrorBody = strErrorBody.PadRight(512, ' ');
-}
-
+//
+//
+// // for error > 400 e.g error 404 page not found
+// if (iStatusCode >= 400)
+// {
+//   if (strErrorBody.Length < 512) strErrorBody = strErrorBody.PadRight(512, ' ');
+// }
+//
 

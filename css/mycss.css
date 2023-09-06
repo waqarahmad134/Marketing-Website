@@ -585,7 +585,7 @@ hr{
     transition: all 0.3s ease 0s;
   }
 
-  .nav__links li:hover {
+  .nav__links a:hover {
     text-decoration-color: #0088a9;
     color: #0088a9;
   }
@@ -724,7 +724,7 @@ hr{
     /*justify-content: space-between;*/
     justify-content: flex-end; /*flex everything to right*/
     align-items: center;
-    padding: 1px 5%;
+    padding: 10px 5%;
   }
 
 
@@ -736,7 +736,7 @@ hr{
     height: 100vh;
     background: #000000;
     color: #0088a9;
-    transition: right 0.7s ease; /* Added transition property */
+    transition: right 1s ease; /* Added transition property */
 
   }
 

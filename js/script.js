@@ -29,8 +29,6 @@ function menuBar() {
       menubar.classList.remove('fa-times');
       mynav.classList.remove('active');
 
-    } else {
-
     }
   }
 

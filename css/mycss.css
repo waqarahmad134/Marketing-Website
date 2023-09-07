@@ -379,6 +379,7 @@ img{
 .testimonials-written{
   font-family: "Montserrat", sans-serif;
 
+  margin-top: 1%;
   width: 100%;
   height: auto;
   /*background-color: #d77777;*/
@@ -406,8 +407,22 @@ img{
   width: 100%;
   float: right;
 }
+.blackAndWhiteImg {
+  /* Apply a transition for smooth effect */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
+  /* Apply grayscale filter initially */
+  filter: grayscale(100%);
+}
 
+/* On hover or touch, remove the grayscale effect to show color */
+.blackAndWhiteImg:hover,
+.blackAndWhiteImg:focus {
+  filter: grayscale(0%);
+}
 .slick-dots {
   text-align: center; /* Center the dots horizontally */
 }
@@ -592,7 +607,11 @@ hr{
 /*  height: 80vh;*/
 /*}*/
 
-
+@media (max-width: 1035px){
+  .testimonial-heading{
+    /*max-width: 70%;*/
+  }
+}
 @media (min-width: 992px) {
   li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -769,13 +788,7 @@ hr{
   html{
     font-size: 55%;
   }
-  .display-last{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-
-  }
   .testimonials-logos{
     width: 100%;
   }
@@ -869,6 +882,19 @@ hr{
     height: 15vh;
   }
 }
+@media (min-width: 750px){
+  .slick-list{
+    width: 100%;
+  }
+  .testimonials-logos{
+    width: 60%;
+    height: auto;
+  }
+
+  .testimonials-written{
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 750px) {
   .bg-solid-color {
     height: 30vh;
@@ -877,6 +903,14 @@ hr{
   .right-banner{
     width: 90%;
   }
+  .display-last{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
 }
 @media (max-width: 480px) {
   .text-change-area-h3 {

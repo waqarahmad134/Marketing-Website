@@ -10,7 +10,7 @@
 }
  html,body {
   overflow: auto; /* Change from "hidden" to "auto" */
-   /*overflow: unset;*/
+   overflow-x: hidden;
 }
  body{
   min-height: 100vh;

@@ -52,6 +52,9 @@
   user-select: none;
 }
 
+  h1,h2,h3,h4,h6,h6,p{
+    font-family: "Montserrat", sans-serif;
+  }
 @keyframes imageTransition {
   0% {
     background-image: url(../img/image1.jpeg); /* Adjust image URL */
@@ -342,6 +345,7 @@ img{
 }
 
 
+
 .testimonial-banner{
   padding-top: 10%;
   font-family: "Montserrat", sans-serif;
@@ -407,7 +411,6 @@ img{
 .testimonials-written h2{
   font-size: 26px;
  }
-
 .blackAndWhiteImg {
   /* Apply a transition for smooth effect */
   -webkit-transition: all 0.3s ease-in-out;
@@ -443,17 +446,9 @@ img{
   height: 0;
   cursor: pointer;
 }
-
 .slick-dots li.slick-active button {
   background: #b42a76; /* Change active dot color */
 }
-
-
-
-
-
-
-
 .floatL{
   float: left;
 }
@@ -562,7 +557,7 @@ img{
   cursor: pointer;
 
 }
-hr{
+ hr{
   width: 90%;
   border: 0;
   border-bottom: 1px solid #ccc ;
@@ -613,12 +608,17 @@ hr{
 /*  height: 80vh;*/
 /*}*/
 
-@media (max-width: 1035px){
+@media (max-width: 1200px){
   .testimonial-heading{
     /*max-width: 70%;*/
   }
+  .tbl-col {
+    width: 95% !important;
+  }
+  .left50{
+    width: 50%  !important;
+  }
 }
-
 @media (min-width: 992px) {
   li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -868,6 +868,10 @@ hr{
     max-height: 60vh ;
   }
 
+  .little-lower{
+    height: auto;
+  }
+
 }
 @media (max-width: 900px) {
   .next-banner-1,
@@ -888,8 +892,10 @@ hr{
   .text-change-area {
     height: 15vh;
   }
+
 }
 @media (min-width: 750px){
+
   .slick-list{
     width: 100%;
   }
@@ -921,8 +927,26 @@ hr{
   }
   .testimonials-logos{
     margin-top: 10%;
+  }
+  .testimonial-clients {
+    filter: grayscale(0%);
+  }
+
+
+  .tbl-col{
+    width: 95% !important;
+    flex-direction:column ;
 
   }
+  .left50{
+    width: 100%  !important;
+  }
+  .tbl{
+    width: 100%;
+  }
+
+
+
 }
 @media (max-width: 550px){
   .testimonial-for-logos {
@@ -937,7 +961,6 @@ hr{
     top: 0;
   }
 }
-
 @media (max-width: 480px) {
   .text-change-area-h3 {
     font-size: 36px;
@@ -990,37 +1013,15 @@ hr{
 .designation{
   font-size: 11px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .testimonial-for-logos {
   width: 100%;
 }
-
 .PositionRelative {
   position: relative;
 }
 .testimonial-groups:first-child {
   display: block;
 }
-
 .testimonial-groups {
   display: none;
 }
@@ -1041,7 +1042,6 @@ hr{
   max-width: 70%;
   max-height: 70%;
 }
-
 .testimonial-groups > img {
   border-width: 0;
   display: block;
@@ -1054,8 +1054,6 @@ hr{
   max-width: 100%;
   height: auto;
 }
-
-
 .testimonial-groups > a {
   cursor: pointer;
   text-decoration: none;
@@ -1071,6 +1069,111 @@ hr{
   transition: all .2s ease-in-out;
   display: inherit;
 }
+
+
+
+
+
+.tbl{
+  display: flex;
+  /*background-color: red;*/
+  margin-top: 5%;
+
+  width: 100%;
+  min-height: 80vh;
+
+  justify-content: center;
+  align-items: center;
+}
+.tbl-col{
+  /*background-color: #39ac31;*/
+  display: inline-flex;
+  width: 70%;
+  height: auto;
+}
+.left50{
+  width: 35%;
+  /*background-color: #8fd79b;*/
+
+
+}
+.right50{
+  width: 50%;
+  /*background-color: #d77777;*/
+
+}
+.services{
+  padding-top: 54px;
+  font-family: Bold, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.4em;
+  max-width: 360px;
+  padding-bottom: 74px;
+}
+
+.extra{
+  padding: 0;
+}
+
+.margin7perc{
+  margin-top: 7%;
+  margin-bottom: 10%;
+}
+
+
+
+
+
+
+
+.SpecialLink {
+  position: relative;
+  font-family: 'Bold', sans-serif;
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: #b42a76;
+  padding-left: 20px;
+  text-transform: uppercase;
+  background-image: url(/img/PinkArrow.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: inline-block;
+
+  ]
+}
+
+.IWantAMouseOVerNowBut50, .IWantAMouseOVerNowBut75, .IWantAMouseOVerNowBut80, .IWantAMouseOVerNowBut85, .IWantAMouseOVerNow {
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.SpecialLink a{
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: inherit;
+  border-width: 0;
+  outline: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: inherit;
+}
+.SpecialLink .Line {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background-color: #b42a76;
+}
+
 
 
 

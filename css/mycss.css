@@ -797,7 +797,7 @@ hr{
   }
 
   .testimonials-logos{
-    width: 100%;
+    width: 120%;
   }
   li, ul,a, button {
     font-family: "Montserrat", sans-serif;
@@ -894,15 +894,13 @@ hr{
     width: 100%;
   }
   .testimonials-logos{
-    padding-top: 10%;
-
     width: 50%;
     height: auto;
   }
 
   .testimonials-written{
     margin-bottom: 10px;
-    min-height: 35vh;
+    min-height: 20vh;
   }
 }
 @media (max-width: 750px) {
@@ -921,8 +919,11 @@ hr{
   .testimonials-written{
     width: 90%;
   }
+  .testimonials-logos{
+    margin-top: 10%;
+  }
   .testimonial-for-logos {
-    width: 80% !important;
+    width: 85% !important;
   }
   .testimonial-clientsImg{
     top: 40%;

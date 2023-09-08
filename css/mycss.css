@@ -921,15 +921,23 @@ hr{
   }
   .testimonials-logos{
     margin-top: 10%;
+
   }
+}
+@media (max-width: 550px){
+  .testimonial-for-logos {
+    width: 90% !important;
+
+  }
+}
+@media (min-width: 550px){
   .testimonial-for-logos {
     width: 85% !important;
+    left: 0;
+    top: 0;
   }
-  .testimonial-clientsImg{
-    top: 40%;
-  }
-
 }
+
 @media (max-width: 480px) {
   .text-change-area-h3 {
     font-size: 36px;

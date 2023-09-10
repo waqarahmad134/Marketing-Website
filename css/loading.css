@@ -10,7 +10,7 @@ body {
 }
 
 .loading-page {
-  z-index: 2;
+  z-index: 3;
 
   position: absolute;
   top: 0;

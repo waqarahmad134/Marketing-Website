@@ -460,8 +460,8 @@ img{
 /*Footer*/
 .sticky-footer{
   width: 100%;
-  position: sticky;
-  top: 100%;
+  position: relative;
+  /*top: 100%;*/
   bottom: 0;
   /*background: linear-gradient(to right, #000000, #000000);*/
   background: #24252A;

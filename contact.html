@@ -14,6 +14,33 @@
   <script src="js/loading.js"></script>  <script src="https://kit.fontawesome.com/e4a6287325.js" ></script>
 
 
+  <script src="js/emailSend.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init('Qv4mKCFdSIerSSlg0');
+      alert("Succesornot" );
+    })();
+
+  </script>
+
+<!--  <script type="text/javascript">-->
+<!--    window.onload = function() {-->
+<!--      document.getElementById('contact-form').addEventListener('submit', function(event) {-->
+<!--        event.preventDefault();-->
+<!--        // generate a five digit number for the contact_number variable-->
+<!--        this.contact_number.value = Math.random() * 100000 | 0;-->
+<!--        // these IDs from the previous steps-->
+<!--        emailjs.sendForm('service_wj5rgb4', 'template_e2femcd', this)-->
+<!--          .then(function() {-->
+<!--            console.log('SUCCESS!');-->
+<!--          }, function(error) {-->
+<!--            console.log('FAILED...', error);-->
+<!--          });-->
+<!--      });-->
+<!--    }-->
+<!--  </script>-->
 
 </head>
 <body>
@@ -96,9 +123,9 @@
 </section>
 
 
-<section class="width100  contact-form">
+<section class="width100  contact-form1">
 
-  <form>
+  <form id="contact-form" action="js/emailSend.js " post>
 
 
     <div class="form-row">
@@ -131,10 +158,10 @@
     </div>
     </div>
     <div class="input-group">
-      <textarea class="message" class="txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING"> </textarea>
+      <textarea id="message" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING"> </textarea>
 <!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
     </div>
-    <button type="submit">Submit</button>
+    <button onclick="sendEmail()" type="submit">Submit</button>
   </form>
 
 
@@ -196,3 +223,6 @@
 
 </body>
 </html>
+
+
+

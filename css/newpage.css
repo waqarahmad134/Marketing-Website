@@ -23,7 +23,7 @@ body{
 .image-banner-np{
   height: 92vh;
   width: 98%;
-  background-image: url(/img/images.jpeg);
+  background-image: url(../img/images.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 

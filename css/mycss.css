@@ -60,19 +60,19 @@
   }
 @keyframes imageTransition {
   0% {
-    background-image: url(../img/image1.jpeg); /* Adjust image URL */
+    background-image: url(../img/recuringImage/image1.jpeg); /* Adjust image URL */
   }
   25% {
-    background-image: url(../img/image2.jpeg); /* Adjust image URL */
+    background-image: url(../img/recuringImage/image2.jpeg); /* Adjust image URL */
   }
   50% {
-    background-image: url(../img/image3.jpeg); /* Adjust image URL */
+    background-image: url(../img/recuringImage/image3.jpeg); /* Adjust image URL */
   }
   75% {
-    background-image: url(../img/image4.jpeg); /* Adjust image URL */
+    background-image: url(../img/recuringImage/image4.jpeg); /* Adjust image URL */
   }
   100% {
-    background-image: url(../img/image5.jpeg); /* Adjust image URL */
+    background-image: url(../img/recuringImage/image5.jpeg); /* Adjust image URL */
   }
 }
 .back-banner-1 {
@@ -1137,7 +1137,7 @@ img{
   color: #b42a76;
   padding-left: 20px;
   text-transform: uppercase;
-  background-image: url(/img/PinkArrow.png);
+  background-image: url(../img/images2/arrowpink.png);
   background-repeat: no-repeat;
   background-position: left center;
   display: inline-block;

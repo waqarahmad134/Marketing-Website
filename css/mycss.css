@@ -42,7 +42,10 @@
 }
   .front-h3{
   font-size: 25vw;
-  /*background-image: url(../img/test-img.jpeg);*/
+
+  padding-top: 8% ;
+
+    /*background-image: url(../img/test-img.jpeg);*/
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
@@ -50,7 +53,7 @@
   font-family: "Montserrat", sans-serif;
   animation: imageTransition 10s infinite alternate; /* Adjust timing as needed */
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/
   pointer-events: none; /* Disable pointer interactions */
   user-select: none;
 }
@@ -723,6 +726,8 @@ img{
   }
   .front-h3{
     font-size: 30vw;
+    padding-top: 4% ;
+
   }
   .paragraph-banner{
     margin: auto 10px;

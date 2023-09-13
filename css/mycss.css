@@ -1050,15 +1050,11 @@ img{
   max-width: 70%;
   max-height: 70%;
 }
-.testimonial-groups > img {
+.testimonial-groups img {
   border-width: 0;
   display: block;
-  border: 0;
-  border: none;
   outline: none;
   outline: 0;
-  border-style: none;
-  outline-width: 0;
   max-width: 100%;
   height: auto;
 }

@@ -1,0 +1,84 @@
+
+
+
+*{
+  border-width: 0;
+  box-sizing: content-box;
+}
+
+
+
+.borderLine{
+  border: black solid  ;
+}
+
+
+.image-recent-work{
+
+  width: 100%;
+  border-radius: 50% ;
+  height: auto;
+
+}
+
+.image-recent-work-container{
+  padding: 90px 72px 52px;
+}
+.width100{
+  width: 100%;
+}
+
+.display-cel{
+  display: inline-flex;
+  border-top: black solid 2px;
+  width: 33.3%;
+}
+.margin0{
+  margin: 0;
+  padding: 0;
+
+}
+.row{
+  width: 100%;
+}
+
+.recent-work-info .title-us{
+  display: flex;
+  flex-direction: column;
+  & .who-we-are{
+    padding: 5% 0 4%;
+  }
+  & h6{
+    padding-bottom: 5% ;
+  }
+}
+
+
+
+.recent-work-h2{
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-size: 15px;
+
+  padding-left: 10%;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+.display-flex{
+  display: inline-flex;
+}
+
+
+.row .hyper-link{
+  position: inherit;
+  display: flex;
+  flex-direction: row-reverse ;
+
+  padding-right: 4%;
+}
+
+
+
+

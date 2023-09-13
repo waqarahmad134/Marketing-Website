@@ -38,6 +38,7 @@ html{
 .holder{
   display: inline-flex;
   align-items: center;
+  padding-top: 5%;
 }
 
 
@@ -118,19 +119,23 @@ form button{
 .google-map{
   display: none;
 }
+  .google-map2{
+    display: flex;
+  }
 .holder,.contact-us{
   width: 100%;
-  padding: 0;
+  padding: 10% 0 0 0;
   justify-content: center;
   align-items: center;
 
 }
 .contact-us-50{
-  width: 100%;
+  width: 95%;
 }
   .u-contact{
     width: 100%;
   }
+
 
 }
 
@@ -139,6 +144,10 @@ form button{
   .google-map2{
     display: none;
   }
+  .google-map{
+    display: unset;
+  }
+
 }
 
 

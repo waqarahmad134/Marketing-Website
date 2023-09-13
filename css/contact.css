@@ -54,6 +54,9 @@ html{
 
 
 
+input:focus-within + label{
+    opacity: 0;
+  }
 
 
 
@@ -104,6 +107,9 @@ form button{
 .form-row .input-group{
   flex-basis: 48%;
 }
+
+
+
 .google-map2{
   display: flex;
   justify-content: center !important;

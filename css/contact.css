@@ -58,8 +58,6 @@ input:focus-within + label{
     opacity: 0;
   }
 
-
-
 form{
   width: 90%;
   max-width: 600px;

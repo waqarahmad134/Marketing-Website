@@ -148,10 +148,14 @@ body{
 }
 
 
+.display-cel:nth-child(1),.display-cel:nth-child(2){
+  margin-right: -5px;
 
+}
 .display-cel{
   display: inline-flex;
-  width: 33%;
+
+  width: 33.37%;
 }
 .margin0{
   margin: 0;
@@ -202,7 +206,6 @@ body{
 
 
 
-
 @media (max-width: 750px) {
   .display-cel:nth-child(3) {
     display: inline-flex;
@@ -210,6 +213,7 @@ body{
 
   .display-cel {
     width: 100%;
+
   }
 
   .description-who-we-are {
@@ -264,6 +268,6 @@ body{
     display: none;
   }
   .display-cel{
-    width: 49.5%;
+    width: 50%;
   }
 }

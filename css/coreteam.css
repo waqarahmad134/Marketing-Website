@@ -1,10 +1,132 @@
-
-
-
 *{
-  border-width: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+html{
+  width: 100%;
+  font-size: unset;
+}
+html,body {
+  overflow: auto; /* Change from "hidden" to "auto" */
+  overflow-x: hidden;
+}
+body{
+  min-height: 100vh;
+}
+
+
+.size-banner{
+  height: auto ;
+
+}
+.image-banner-np{
+  height: 92vh;
+  width: 98%;
+  background-image: url(../img/images2/backImage.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  & h2 {
+    font-size: 90px;
+    font-family: Bold, sans-serif;
+    text-transform: uppercase;
+  }
+}
+.paddingAll{
+  padding-top: 1%;
+}
+.alignTextCentre{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+
+
+}
+
+.more-about-us{
+  height: auto;
+
+  margin-top: 10%;
+  align-content: center !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.u-service{
+  width: 100%;
+
+  display: flex;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.services2{
+  padding-top: 54px;
+  font-family: Bold, sans-serif;
+  font-size: 1.17em;
+  letter-spacing: 0.54em;
+  line-height: 2;
+  max-width: 626px;
+  padding-bottom: 40px;
+}
+.more-about-us > .title-us{
+  padding-left: 0;
+}
+.max-width660{
+  max-width: 660px;
+
+}
+.u-service > .description-who-we-are{
+  font-family: Book,sans-serif;
+}
+
+
+.testimonial-banner{
+  height: auto;
+}
+.testimonial-grey{
+  min-height: 70vh;
+  margin-bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  /*height: auto;*/
+}
+.testimonial-slider{
+  display: flex;
+}
+.testimonial {
+  width: 50%;
+  /*display: flex;*/
+  & p { padding-left: 18px;}
+}
+
+/*.quote{*/
+/*  background-image: url("/img/comma.png");*/
+/*  background-repeat: no-repeat;*/
+/*}*/
+
+.testimonial-heading{
+  max-width: 400px;
+  font-size: 16px;
+  padding-left: 42px;
+}
+.width90{
+  width: 90%;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -24,14 +146,16 @@
 .image-recent-work-container{
   padding: 90px 72px 52px;
 }
-.width100{
-  width: 100%;
-}
 
+
+.display-cel:nth-child(1),.display-cel:nth-child(2){
+  margin-right: -5px;
+
+}
 .display-cel{
   display: inline-flex;
-  border-top: black solid 2px;
-  width: 33.3%;
+
+  width: 33.37%;
 }
 .margin0{
   margin: 0;
@@ -82,3 +206,68 @@
 
 
 
+@media (max-width: 750px) {
+  .display-cel:nth-child(3) {
+    display: inline-flex;
+  }
+
+  .display-cel {
+    width: 100%;
+
+  }
+
+  .description-who-we-are {
+    width: 90%;
+  }
+
+  .heading {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .testimonial-slider{
+
+    display: flex !important;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .testimonial{
+    width: 100%;
+    padding: 2%;
+  }
+
+  .image-banner-np {
+    height: 50vh;
+  }
+  .image-recent-work-container{
+    padding: 7% 20% 1%;
+  }
+
+}
+
+
+
+@media (max-width: 993px) {
+  .services2 h2 {
+    font-size: 1.17em !important;
+  }
+
+  .testimonial-heading {
+    padding-top: 10%;
+
+  }
+}
+
+
+@media (max-width: 1101px) and (min-width: 751px){
+  .display-cel:nth-child(3){
+    display: none;
+  }
+  .display-cel{
+    width: 50%;
+  }
+}

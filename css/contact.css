@@ -56,9 +56,11 @@ html{
   display: none;
 }
 
-input:focus-within + label{
-    opacity: 0;
-  }
+/*input:focus + label{*/
+/*    opacity: 0;*/
+/*  }*/
+
+
 
 form{
   width: 90%;
@@ -170,11 +172,6 @@ form button{
 
 
 
-
-
-.d-block {
-  display: block !important;
-}
 .error-message br+br {
   margin-top: 25px;
 }

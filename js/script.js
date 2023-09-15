@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', menuBar);
+document.addEventListener('DOMContentLoaded',  togglePlaceholder);
 
 function menuBar() {
 
@@ -61,4 +62,32 @@ function menuBar() {
 //   if (strErrorBody.Length < 512) strErrorBody = strErrorBody.PadRight(512, ' ');
 // }
 //
+
+
+  function togglePlaceholder() {
+  const inputField = document.getElementById('name');
+  const placeholder = "FULL NAME*"; // Your placeholder text here
+
+  if (inputField.value.length === 0) {
+  inputField.setAttribute('placeholder', placeholder);
+} else {
+  inputField.removeAttribute('placeholder');
+}
+  const inputField1 = document.getElementById('email');
+  const placeholder1 = "EMAIL ADDRESS*"; // Your placeholder text here
+
+  if (inputField1.value.length === 0) {
+  inputField1.setAttribute('placeholder', placeholder1);
+} else {
+  inputField1.removeAttribute('placeholder');
+}
+  const inputField2 = document.getElementById('phone');
+  const placeholder2 = "MOBILE NUMBER*"; // Your placeholder text here
+
+  if (inputField2.value.length === 0) {
+  inputField2.setAttribute('placeholder', placeholder2);
+} else {
+  inputField2.removeAttribute('placeholder');
+}
+}
 

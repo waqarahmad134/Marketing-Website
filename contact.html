@@ -102,19 +102,19 @@
     <div class="form-row">
     <div class="input-group">
       <input type="text" id="name" required>
-      <label for="name">FULL NAME*</label>
+      <label for="name"></label>
     </div>
     <div class="input-group">
       <input type="email" id="email" required>
-      <label for="email">EMAIL ADDRESS*</label>
+      <label for="email"></label>
     </div>
     </div>
 
 
     <div class="form-row">
     <div class="input-group">
-      <input type="tel" id="phone" required>
-      <label for="phone">MOBILE NUMBER</label>
+      <input type="number" id="phone" required>
+      <label for="phone"></label>
     </div>
     <div class="input-group">
         <select id="subject" class="subjectOption" >
@@ -155,14 +155,14 @@
 
       Email.send({
 //        Host : "smtp.elasticemail.com",
-        SecureToken : "58009271-2324-49eb-8129-174e02991665",//20
-        To : 'bilalillahi20@gmail.com',
-        From : 'bilalillahi20@gmail.com' ,
-        Subject : subjectText.toString(),
-        Body :"From: " + document.getElementById('email').value + "<br>" +
-          "Subject: "+ subjectText + "<br><br>" +
-          "Message:<br> "+document.getElementById('message').value + "<br><br>" +
-          "Regards:<br> " +document.getElementById('name').value
+        SecureToken: "58009271-2324-49eb-8129-174e02991665",//20
+        To: 'bilalillahi20@gmail.com',
+        From: 'bilalillahi20@gmail.com',
+        Subject: subjectText.toString(),
+        Body: "From: " + document.getElementById('email').value + "<br>" +
+          "Subject: " + subjectText + "<br><br>" +
+          "Message:<br> " + document.getElementById('message').value + "<br><br>" +
+          "Regards:<br> " + document.getElementById('name').value
       }).then(
         message => {
           if (message === 'OK') {
@@ -177,16 +177,22 @@
             document.getElementById('subject').value = '';
             document.getElementById('message').value = '';
             document.getElementById('subject').value = 0;
+            setTimeout(function () {
+              forms.querySelector('.sent-message').classList.remove('d-block');
+            }, 10000);
 
 
           } else {
             alert('Error: ' + message);
             forms.querySelector('.loading').classList.remove('d-block');
-            forms.querySelector('.error-message').innerHTML = "Error: " + message ;
+            forms.querySelector('.error-message').innerHTML = "Error: " + message;
             forms.querySelector('.error-message').classList.add('d-block');
           }
         }
-      );
+      )
+
+
+
 
       // Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
 //Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.

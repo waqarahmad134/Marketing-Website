@@ -49,7 +49,7 @@
   </div>
 
 
-  <a class="cta" href="404.html"><button>Contact</button></a>
+  <a class="cta" href="404.html"><button class="contactButton">Contact</button></a>
 </header>
 
 
@@ -149,7 +149,6 @@
 
   <script>
     let forms = document.getElementById('successDiv');
-    alert(forms.innerText)
     function sendEmail() {
       let subjectText = (document.getElementsByClassName('Option').item(document.getElementById('subject').value)).innerHTML;
       forms.querySelector('.loading').classList.add('d-block');

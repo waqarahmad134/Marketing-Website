@@ -52,7 +52,9 @@ html{
   justify-content: center;
 }
 
-
+.displayNone{
+  display: none;
+}
 
 input:focus-within + label{
     opacity: 0;

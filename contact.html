@@ -95,7 +95,6 @@
   </div>
 </section>
 
-
 <section class="width100  contact-form1">
   <form id="contact-form" onsubmit="sendEmail(); reset(); return false;" method="post" >
 <!--  <form id="contact-form"  method="POST" action="./php%20mailer/email.js">-->
@@ -118,7 +117,7 @@
       <label for="phone">MOBILE NUMBER</label>
     </div>
     <div class="input-group">
-        <select id="subject" class="subjectOption">
+        <select id="subject" class="subjectOption" >
           <option value="0"  class="Option">Subject </option>
           <option value="1"  class="Option">Request a Call Back</option>
           <option value="2"  class="Option">Request a quotation</option>
@@ -130,31 +129,30 @@
     </div>
     </div>
     <div class="input-group">
-      <textarea id="message" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING"> </textarea>
+      <textarea id="message" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" required> </textarea>
 <!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
     </div>
     <button  id="submit" type="submit">Submit</button>
-    <div class="successDiv"></div>
-    <div id="successDiv" >
-      <div id="loading " class="loading">Loading</div>
-      <div id="error-message" class="error-message"></div>
-      <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
-    </div>
+
+      <div id="successDiv" >
+        <div id="loading" class="loading">Loading</div>
+        <div id="error-message" class="error-message">Error</div>
+        <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
+      </div>
+
+
 
   </form>
 
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script>
-    let forms = document.getElementById('successDiv')
-    alert("in")
+    let forms = document.getElementById('successDiv');
+    alert(forms.innerText)
     function sendEmail() {
       let subjectText = (document.getElementsByClassName('Option').item(document.getElementById('subject').value)).innerHTML;
-
       forms.querySelector('.loading').classList.add('d-block');
-      alert("in2" + document.getElementsByClassName('subjectOption').value)
 
       Email.send({
 //        Host : "smtp.elasticemail.com",
@@ -162,11 +160,10 @@
         To : 'bilalillahi20@gmail.com',
         From : 'bilalillahi20@gmail.com' ,
         Subject : subjectText.toString(),
-        // Subject : document.getElementsByClassName('Option'),
         Body :"From: " + document.getElementById('email').value + "<br>" +
-          "Message: "+document.getElementById('message').value + "<br>" +
-          "Subject: "+ subjectText + "<br>" +
-          "Regards: " +document.getElementById('name').value
+          "Subject: "+ subjectText + "<br><br>" +
+          "Message:<br> "+document.getElementById('message').value + "<br><br>" +
+          "Regards:<br> " +document.getElementById('name').value
       }).then(
         message => {
           if (message === 'OK') {
@@ -180,6 +177,7 @@
             document.getElementById('email').value = '';
             document.getElementById('subject').value = '';
             document.getElementById('message').value = '';
+            document.getElementById('subject').value = 0;
 
 
           } else {

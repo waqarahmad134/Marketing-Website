@@ -89,5 +89,12 @@ function menuBar() {
 } else {
   inputField2.removeAttribute('placeholder');
 }
+
+      const textArea = document.getElementById('message');
+      textArea.innerText = textArea.innerText.trim();
+
 }
+
+
+
 

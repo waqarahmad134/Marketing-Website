@@ -10,12 +10,72 @@
   <link rel="stylesheet" href="css/newpage.css">
   <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/contactRight.css">
   <script src="js/script.js"></script>
+  <script src="js/emailRight.js"></script>
   <script src="js/loading.js"></script>  <script src="https://kit.fontawesome.com/e4a6287325.js" ></script>
 
 
 
 </head>
+
+
+<div class=" backBlack">
+  <div class="rightContact ">
+
+    <div class="upperContact">
+      <div class="contactPopUP">
+        <h3>Call us on : 0321-1234567</h3>
+      </div>
+      <div class="crossExit">
+        <h3>X</h3>
+      </div>
+    </div>
+
+
+    <div class="middleFormContact">
+      <form id="formRight" onsubmit="sendEmailRight(); reset(); return false;" >
+        <div class="form-row">
+          <div class="input-group">
+            <input type="text" id="nameRight" placeholder="NAME" required>
+            <label for="nameRight"></label>
+          </div>
+          </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <input type="email" id="emailRight" placeholder="EMAIL" required>
+            <label for="emailRight"></label>
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="input-group">
+            <input type="number" id="phoneRight" placeholder="PHONE NUMBER" required>
+            <label for="phoneRight"></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+        <div class="input-group">
+          <textarea id="messageRight" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" required> </textarea>
+          <!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
+        </div>
+        </div>
+
+        <div class="automate">
+          <button  id="submitRight" type="submit">Submit
+          </button>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
 <body>
 <div class="loading-page">
   <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -49,7 +109,7 @@
   </div>
 
 
-  <a class="cta" href="404.html"><button class="contactButton">Contact</button></a>
+  <a class="cta" onclick="emailBar()"><button class="contactButton">Contact</button></a>
 </header>
 
 
@@ -161,6 +221,7 @@
         Subject: subjectText.toString(),
         Body:
           "From: " + document.getElementById('email').value + "<br>" +
+          "Phone: " + document.getElementById('phone').value + "<br><br>" +
           "Subject: " + subjectText + "<br><br>" +
           "Message:<br> " + document.getElementById('message').value + "<br><br>" +
           "Regards:<br> " + document.getElementById('name').value

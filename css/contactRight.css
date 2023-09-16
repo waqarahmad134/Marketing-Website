@@ -1,0 +1,86 @@
+
+.backBlack{
+  background-color: rgba(2,2,2,0.5);
+  transition:  all 2s ease-in;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 11;
+
+}
+.rightContact{
+  position: absolute;
+  top: 0;
+  right: -100%;
+  /*right: 0;*/
+  background-color: #fff;
+  width: 90%;
+  height: 100%;
+  max-width: 380px;
+
+}
+.rightContact.active {
+  right: 0;
+  width: 100%; /* Set width to 100% */
+  transition: right 1s ease;
+  height: 100%; /* Set height to 100% of viewport height */
+  /*z-index: 1;*/
+}
+
+
+
+
+.crossExit{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  z-index: 10;
+}
+
+.contactPopUP{
+  padding: 35px 0 40px;
+
+}
+.contactPopUP h3{
+  position: relative;
+  font-family: 'Bold', serif;
+  font-size: 15px;
+  letter-spacing: .2em;
+  color: #222;
+  padding-left: 46px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+
+.upperContact{
+  display: inline-flex;
+}
+
+.middleFormContact{
+  width: 100%;
+  padding: 10px 40px;
+
+}
+#formRight input{
+  width: 100% !important;
+}
+#formRight {
+  width: 100% !important;
+}
+#formRight .input-group{
+  flex-basis: unset;
+  width: 100%;
+}
+
+
+
+

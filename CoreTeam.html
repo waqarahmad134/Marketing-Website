@@ -6,12 +6,69 @@
 
   <link rel="stylesheet" href="css/coreteam.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/emailRight.js"></script>
+  <link rel="stylesheet" href="css/contactRight.css">
+
 
 
 </head>
 <body>
 
 
+<div class="backBlack">
+  <div class="rightContact ">
+
+    <div class="upperContact">
+      <div class="contactPopUP">
+        <h3>Call us on : +92 329 0239 239</h3>
+      </div>
+      <div class="crossExit">
+        <h3>X</h3>
+      </div>
+    </div>
+
+
+    <div class="middleFormContact">
+      <form id="formRight" onsubmit="sendEmailRight(); reset(); return false;" >
+        <div class="form-row">
+          <div class="input-group">
+            <input type="text" id="nameRight" placeholder="NAME" required>
+            <label for="nameRight"></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <input type="email" id="emailRight" placeholder="EMAIL" required>
+            <label for="emailRight"></label>
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="input-group">
+            <input type="number" id="phoneRight" placeholder="PHONE NUMBER" required>
+            <label for="phoneRight"></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <textarea id="messageRight" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" required> </textarea>
+            <!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
+          </div>
+        </div>
+
+        <div class="automate">
+          <button  id="submitRight" type="submit">Submit
+          </button>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
 
 
 <div class="loading-page">
@@ -46,7 +103,7 @@
   </div>
 
 
-  <a class="cta" href="contact.html"><button>Contact</button></a>
+  <a class="cta" onclick="emailBar()"><button>Contact</button></a>
 </header>
 
 <section>
@@ -178,25 +235,32 @@
 
     </div>
     <div class="colFooter">
-      <h3>Office <div class="underline-h3"><span></span></div></h3>
-      <p>Gulberg</p>
+      <h3>Office
+        <div class="underline-h3"><span></span></div>
+      </h3>
+      <p>DHA Phase 2</p>
       <p>Lahore, Punjab</p>
       <p>Pakistan 54000</p>
-      <p class="email-id">tester@gmail.com</p>
-      <h4> +92 3121212120 </h4>
+      <p class="email-id">Hello.adxfactor@gmail.com</p>
+      <p class="email-id">hello@adxfactor.com</p>
+      <h4> +92 3290239239 </h4>
     </div>
     <div class="colFooter">
-      <h3>Links <div class="underline-h3"><span></span></div></h3>
+      <h3>Links
+        <div class="underline-h3"><span></span></div>
+      </h3>
       <ul class="footer-ul">
         <li><a href="index.html"></a> Home</li>
         <li><a href="adxFactor-digital-marketing-advertising-company.html"></a> About Us</li>
         <li><a href="404.html"></a> Services</li>
-        <li><a href="404.html"></a> Core Team</li>
-        <li><a href="404.html"></a> Contact Us</li>
+        <li><a href="CoreTeam.html"></a> Core Team</li>
+        <li><a href="contact.html"></a> Contact Us</li>
       </ul>
     </div>
     <div class="colFooter">
-      <h3>Newsletter <div class="underline-h3"><span></span></div></h3>
+      <h3>Newsletter
+        <div class="underline-h3"><span></span></div>
+      </h3>
       <form class="formFooter">
         <i class="fa-regular fa-envelope"></i>
         <input type="email" placeholder="Your Email Here " required>

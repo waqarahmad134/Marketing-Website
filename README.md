@@ -20,7 +20,7 @@ You can visit the site on https://bilalillahitest.github.io/marketing_website/
 
 **Contact Us Page**
 <img width="100%" alt="Screenshot 2023-11-07 at 8 47 51 PM" src="https://github.com/MuhammadBilalEllahi/Marketing-Website/assets/67937279/19c19d87-4b48-4aa1-ad27-f146d31f2f63">
-<img width="100%"" alt="Screenshot 2023-11-07 at 8 48 04 PM" src="https://github.com/MuhammadBilalEllahi/Marketing-Website/assets/67937279/3ee805b3-1a81-4e29-91ab-d4b55f7c929c">
+<img width="100%" alt="Screenshot 2023-11-07 at 8 48 04 PM" src="https://github.com/MuhammadBilalEllahi/Marketing-Website/assets/67937279/3ee805b3-1a81-4e29-91ab-d4b55f7c929c">
 <img width="100%" alt="Screenshot 2023-11-07 at 8 48 10 PM" src="https://github.com/MuhammadBilalEllahi/Marketing-Website/assets/67937279/8a0ed995-c7b6-4779-ae88-231e17d9cd7a">
 
 **Contact Us Hover**

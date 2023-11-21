@@ -1,11 +1,17 @@
-  function sendEmailRight() {
+const env = require('dotenv');
+env.config({path:'./config.env'});
+const KEYgen = process.env.KEY;
+const genTo = process.env.To;
+const genFrom = process.env.FROM;
 
-  alert("in")
+function sendEmailRight() {
+
+  // alert("in")
     Email.send({
 //        Host : "smtp.elasticemail.com",
-      SecureToken: "58009271-2324-49eb-8129-174e02991665",//20
-      To: 'bilalillahi20@gmail.com',
-      From: 'marketing-team@adxfactor.com',
+      SecureToken: KEYgen,//20
+      To: genTo,
+      From: genFrom,
       Subject: 'Contacts You',
       Body:
         "From: " + document.getElementById('emailRight').value + "<br>" +
@@ -15,10 +21,10 @@
     }).then(
       message => {
         if (message === 'OK') {
-          alert(message);
+          // alert(message);
 
 
-          alert('Email sent successfully');
+          // alert('Email sent successfully');
           document.getElementById('name').value = ''; // Clear form fields
           document.getElementById('email').value = '';
           document.getElementById('message').value = '';
@@ -29,7 +35,7 @@
         }
       }
     )
-
+    //58009271-2324-49eb-8129-174e02991665
     // Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
 //Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
 }

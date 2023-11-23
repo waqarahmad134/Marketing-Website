@@ -13,9 +13,7 @@
   <link rel="stylesheet" href="css/contactRight.css">
   <script src="js/emailRight.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/email.js"></script>
   <script src="js/loading.js"></script>  <script src="https://kit.fontawesome.com/e4a6287325.js" ></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 
 
@@ -35,18 +33,18 @@
     </div>
 
 
-    <div class="middleFormContact">
+    <div class="middleFormContact" >
       <form id="formRight" onsubmit="sendEmailRight(); reset(); return false;" >
         <div class="form-row">
           <div class="input-group">
-            <input type="text" id="nameRight" placeholder="NAME" required>
+            <input type="text" id="nameRight" placeholder="NAME" >
             <label for="nameRight"></label>
           </div>
           </div>
 
         <div class="form-row">
           <div class="input-group">
-            <input type="email" id="emailRight" placeholder="EMAIL" required>
+            <input type="email" id="emailRight" placeholder="EMAIL" >
             <label for="emailRight"></label>
           </div>
         </div>
@@ -54,14 +52,14 @@
 
         <div class="form-row">
           <div class="input-group">
-            <input type="number" id="phoneRight" placeholder="PHONE NUMBER" required>
+            <input type="number" id="phoneRight" placeholder="PHONE NUMBER" >
             <label for="phoneRight"></label>
           </div>
         </div>
 
         <div class="form-row">
         <div class="input-group">
-          <textarea id="messageRight" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" required> </textarea>
+          <textarea id="messageRight" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" > </textarea>
           <!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
         </div>
         </div>
@@ -157,29 +155,109 @@
   </div>
 </section>
 
-<section class="width100  contact-form1">
-    <form id="contact-form" onsubmit="sendEmail(); reset(); event.preventDefault();;" method="post">
+<!-- Waqar code start here  -->
+<section class="width100 contact-form1" style="margin-bottom: 100px;">
+  <form id="contact-form">
+    <div class="form-row">
+      <div class="input-group">
+        <input type="text" id="name">
+      </div>
+      <div class="input-group">
+        <input type="email" id="email">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-group">
+        <input type="number" id="phone">  
+      </div>
+      <div class="input-group">
+        <select id="subject" class="subjectOption">
+          <option value="0" class="Option">Subject</option>
+          <option value="1" class="Option">Request a Call Back</option>
+          <option value="2" class="Option">Request a quotation</option>
+          <option value="3" class="Option">Request A Meeting</option>
+          <option value="4" class="Option">General Enquiries</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-group">
+      <textarea id="message" class="txtStyle" rows="8" placeholder="YOUR MESSAGE INCLUDING"></textarea>
+    </div>
+    <button id="submit" type="button" onclick="sendEmail()">Submit</button>
 
+    <div id="successDiv">
+      <div id="loading" class="loading">Loading</div>
+      <div id="error-message" class="error-message">Error</div>
+      <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
+    </div>
+  </form>
+</section>
 
+<script>
+  function sendEmail() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const formData = { name, email, phone, subject, message };
+    fetch('http://localhost:6786/sendmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data.status === '1') {
+        showSuccessMessage();
+      } else {
+        showErrorMessage();
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      showErrorMessage();
+    });
+  }
+
+  function showSuccessMessage() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error-message').style.display = 'none';
+    document.getElementById('sent-message').style.display = 'block';
+  }
+
+  function showErrorMessage() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error-message').style.display = 'block';
+    document.getElementById('sent-message').style.display = 'none';
+  }
+</script>
+
+<!-- Waqar code end here  -->
+
+<!-- <section class="width100  contact-form1" style="margin-bottom:100px;">
+  <form id="contact-form" onsubmit="sendEmail(); reset(); return false;" method="post" >
     <div class="form-row">
     <div class="input-group">
-      <input type="text" id="name" required>
+      <input type="text" id="name" >
       <label for="name"></label>
     </div>
     <div class="input-group">
-      <input type="email" id="email" required>
+      <input type="email" id="email" >
       <label for="email"></label>
     </div>
     </div>
-
-
     <div class="form-row">
     <div class="input-group">
-      <input type="number" id="phone" required>
+      <input type="number" id="phone" >
       <label for="phone"></label>
     </div>
     <div class="input-group">
-        <select id="subject" class="subjectOption" required>
+        <select id="subject" class="subjectOption" >
           <option value="0"  class="Option">Subject </option>
           <option value="1"  class="Option">Request a Call Back</option>
           <option value="2"  class="Option">Request a quotation</option>
@@ -191,19 +269,70 @@
     </div>
     </div>
     <div class="input-group">
-      <textarea id="message" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" required> </textarea>
-<!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
+      <textarea id="message" class=" txtStyle" rows="8" PLACEHOLDER="YOUR MESSAGE INCLUDING" > </textarea>
     </div>
     <button  id="submit" type="submit">Submit</button>
+
       <div id="successDiv" >
         <div id="loading" class="loading">Loading</div>
         <div id="error-message" class="error-message">Error</div>
         <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
       </div>
+
+
+
   </form>
+</section> -->
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
+  <!-- <script>
+    let forms = document.getElementById('successDiv');
+    function sendEmail() {
+      let subjectText = (document.getElementsByClassName('Option').item(document.getElementById('subject').value)).innerHTML;
+      forms.querySelector('.loading').classList.add('d-block');
+      Email.send({
+//        Host : "smtp.elasticemail.com",
+        SecureToken: "58009271-2324-49eb-8129-174e02991665",//20
+        To: 'bilalillahi20@gmail.com',
+        From: 'marketing-team@adxfactor.com',
+        Subject: subjectText.toString(),
+        Body:
+          "From: " + document.getElementById('email').value + "<br>" +
+          "Phone: " + document.getElementById('phone').value + "<br><br>" +
+          "Subject: " + subjectText + "<br><br>" +
+          "Message:<br> " + document.getElementById('message').value + "<br><br>" +
+          "Regards:<br> " + document.getElementById('name').value
+      }).then(
+        message => {
+          if (message === 'OK') {
+            forms.querySelector('.loading').classList.remove('d-block');
+            forms.querySelector('.sent-message').classList.add('d-block');
+            document.getElementById('name').value = ''; // Clear form fields
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+            document.getElementById('subject').value = 0;
+            setTimeout(function () {
+              forms.querySelector('.sent-message').classList.remove('d-block');
+            }, 10000);
+          } else {
+            alert('Error: ' + message);
+            forms.querySelector('.loading').classList.remove('d-block');
+            forms.querySelector('.error-message').innerHTML = "Error: " + message;
+            forms.querySelector('.error-message').classList.add('d-block');
+          }
+        }
+      )
+
+
+
+
+      // Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
+//Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
+
+    }
+  </script> -->
 
 
 
@@ -211,11 +340,9 @@
 
 
 
-
-</section>
 
 <div class="google-map2">
-<!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.537457203673!2d74.27184067627891!3d31.454398450397267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901177ef84961%3A0x1c4e5e0e74acaf6d!2sAdX%20-%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2s!4v1694318580923!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.537457203673!2d74.27184067627891!3d31.454398450397267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901177ef84961%3A0x1c4e5e0e74acaf6d!2sAdX%20-%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2s!4v1694318580923!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 <footer class="sticky-footer">
@@ -254,7 +381,7 @@
       </h3>
       <form class="formFooter">
         <i class="fa-regular fa-envelope"></i>
-        <input type="email" placeholder="Your Email Here " required>
+        <input type="email" placeholder="Your Email Here " >
         <button class="buttonFooter" type="submit">  <i class="fa-solid fa-arrow-right"></i></button>
       </form>
       <div class="social-icon-footer">

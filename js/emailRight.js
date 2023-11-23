@@ -1,8 +1,17 @@
-const env = require('dotenv');
-env.config({path:'./config.env'});
+
+
+
+
+// const {env} =
+  require('dotenv').config({path:'../.env'});
+
+// require('dotenv').config();
+// dotenv.config({path:'./.env'});
 const KEYgen = process.env.KEY;
 const genTo = process.env.To;
 const genFrom = process.env.FROM;
+
+// document.addEventListener('DOMContentLoaded', sendEmailRight);
 
 function sendEmailRight() {
 
@@ -35,9 +44,6 @@ function sendEmailRight() {
         }
       }
     )
-    //58009271-2324-49eb-8129-174e02991665
-    // Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
-//Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
 }
 
 

@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="css/contactRight.css">
   <script src="js/emailRight.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/email.js"></script>
   <script src="js/loading.js"></script>  <script src="https://kit.fontawesome.com/e4a6287325.js" ></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 
 
@@ -156,8 +158,8 @@
 </section>
 
 <section class="width100  contact-form1">
-  <form id="contact-form" onsubmit="sendEmail(); reset(); return false;" method="post" >
-<!--  <form id="contact-form"  method="POST" action="./php%20mailer/email.js">-->
+    <form id="contact-form" onsubmit="sendEmail(); reset(); event.preventDefault();;" method="post">
+
 
     <div class="form-row">
     <div class="input-group">
@@ -193,74 +195,16 @@
 <!--      <label for="message">YOUR MESSAGE INCLUDING</label>-->
     </div>
     <button  id="submit" type="submit">Submit</button>
-
       <div id="successDiv" >
         <div id="loading" class="loading">Loading</div>
         <div id="error-message" class="error-message">Error</div>
         <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
       </div>
-
-
-
   </form>
-
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-  <script>
-    let forms = document.getElementById('successDiv');
-    function sendEmail() {
-      let subjectText = (document.getElementsByClassName('Option').item(document.getElementById('subject').value)).innerHTML;
-      forms.querySelector('.loading').classList.add('d-block');
 
-      Email.send({
-//        Host : "smtp.elasticemail.com",
-        SecureToken: "58009271-2324-49eb-8129-174e02991665",//20
-        To: 'bilalillahi20@gmail.com',
-        From: 'marketing-team@adxfactor.com',
-        Subject: subjectText.toString(),
-        Body:
-          "From: " + document.getElementById('email').value + "<br>" +
-          "Phone: " + document.getElementById('phone').value + "<br><br>" +
-          "Subject: " + subjectText + "<br><br>" +
-          "Message:<br> " + document.getElementById('message').value + "<br><br>" +
-          "Regards:<br> " + document.getElementById('name').value
-      }).then(
-        message => {
-          if (message === 'OK') {
-            alert(message);
-
-            forms.querySelector('.loading').classList.remove('d-block');
-            forms.querySelector('.sent-message').classList.add('d-block');
-
-            alert('Email sent successfully');
-            document.getElementById('name').value = ''; // Clear form fields
-            document.getElementById('email').value = '';
-            document.getElementById('subject').value = '';
-            document.getElementById('message').value = '';
-            document.getElementById('subject').value = 0;
-            setTimeout(function () {
-              forms.querySelector('.sent-message').classList.remove('d-block');
-            }, 10000);
-
-
-          } else {
-            alert('Error: ' + message);
-            forms.querySelector('.loading').classList.remove('d-block');
-            forms.querySelector('.error-message').innerHTML = "Error: " + message;
-            forms.querySelector('.error-message').classList.add('d-block');
-          }
-        }
-      )
-
-
-
-
-      // Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
-//Your security token is 58009271-2324-49eb-8129-174e02991665 Please take note of this.
-
-    }
-  </script>
 
 
 
@@ -271,7 +215,7 @@
 </section>
 
 <div class="google-map2">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.537457203673!2d74.27184067627891!3d31.454398450397267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901177ef84961%3A0x1c4e5e0e74acaf6d!2sAdX%20-%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2s!4v1694318580923!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.537457203673!2d74.27184067627891!3d31.454398450397267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901177ef84961%3A0x1c4e5e0e74acaf6d!2sAdX%20-%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2s!4v1694318580923!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 </div>
 
 <footer class="sticky-footer">
